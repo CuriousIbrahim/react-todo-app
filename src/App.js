@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Todos from './Components/Todos';
+import AddTodo from './Components/AddTodo';
 
 class App extends Component {
 
@@ -30,6 +31,8 @@ class App extends Component {
 
     return (<div className="App">
       <h1>React Todo App</h1>
+
+      <AddTodo/>
       <Todos todos={this.state.todos}></Todos>
     </div>);
   }
