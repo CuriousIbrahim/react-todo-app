@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import Todos from './Components/Todos';
 
 class App extends Component {
@@ -29,7 +29,7 @@ class App extends Component {
     this.setTodos();
 
     return (<div className="App">
-
+      <h1>React Todo App</h1>
       <Todos todos={this.state.todos}></Todos>
     </div>);
   }
