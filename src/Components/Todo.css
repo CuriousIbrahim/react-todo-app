@@ -1,0 +1,14 @@
+.remove-button {
+  margin-right: 50px;
+  float: right;
+}
+
+.todo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  list-style: none;
+  border: 3px black solid;
+  font-size: 30px;
+  padding: 10px;
+}
