@@ -4,22 +4,25 @@ import './App.css';
 import Todos from './Components/Todos';
 import AddTodo from './Components/AddTodo';
 
+const uuid = require('uuid/v1');
+
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-      todos: []
+      todos: [],
+      count: 0
     }
   }
 
   setTodos() {
     this.state.todos = [
       {
-        id: 1,
+        id: uuid(),
         name: 'Eat breakfast'
       }, {
-        id: 2,
+        id: uuid(),
         name: 'Buy groceries'
       }
     ]
@@ -39,6 +42,8 @@ class App extends Component {
 
     this.setState({todos: todos});
   }
+
+  addTodo(name) {}
 
   componentWillMount() {
     this.setTodos();
