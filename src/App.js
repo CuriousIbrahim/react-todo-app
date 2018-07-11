@@ -43,7 +43,15 @@ class App extends Component {
     this.setState({todos: todos});
   }
 
-  addTodo(name) {}
+  addTodo(todo) {
+    let todos = this.state.todos;
+
+    console.log('App.js', todo);
+
+    todos.push(todo);
+
+    this.setState({todos: todos});
+  }
 
   componentWillMount() {
     this.setTodos();
@@ -56,7 +64,7 @@ class App extends Component {
     return (<div className="App">
       <h1>React Todo App</h1>
 
-      <AddTodo/>
+      <AddTodo onAdd={this.addTodo.bind(this)}/>
       <Todos todos={this.state.todos} onDelete={this.deleteTodo.bind(this)}/>
     </div>);
   }
