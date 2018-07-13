@@ -1,6 +1,9 @@
-.remove-button {
+.remove-btn {
+  color: red;
+  text-decoration: none;
   margin-right: 50px;
   float: right;
+  font-size: 115%;
 }
 
 .todo {
