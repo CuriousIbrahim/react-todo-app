@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './AddTodo.css';
 const uuid = require('uuid/v1');
 
 class AddTodo extends Component {
@@ -39,8 +40,8 @@ class AddTodo extends Component {
     return (<div>
       {/* <h2>Add Todo</h2> */}
       <form onSubmit={this.onSubmit.bind(this)}>
-        <input type="text" placeholder="Enter Item" ref={(c) => this.todo = c}></input>
-        <button>Add</button>
+        <input id="todo-input" type="text" placeholder="Enter Item" ref={(c) => this.todo = c}></input>
+        <button id="add-btn">Add</button>
       </form>
     </div>)
   }
