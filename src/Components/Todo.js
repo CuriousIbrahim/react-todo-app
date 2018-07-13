@@ -9,8 +9,7 @@ class Todo extends Component {
   }
 
   render() {
-    return (<li class="todo" id={this.props.id}>{this.props.name}
-      <a onClick={this.delete.bind(this, this.props.id)} class='remove-btn' href='#'>X</a>
+    return (<li onClick={this.delete.bind(this, this.props.id)} class="todo" id={this.props.id}>{this.props.name}
     </li>)
   }
 
