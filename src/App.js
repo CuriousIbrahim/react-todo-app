@@ -37,23 +37,34 @@ class App extends Component {
       }
     }
 
-    console.log(todos);
-
     this.setState({todos: todos});
+    this.saveStateToLocalStorage();
   }
 
   addTodo(todo) {
     let todos = this.state.todos;
 
-    console.log('App.js', todo);
-
     todos.push(todo);
 
     this.setState({todos: todos});
+    this.saveStateToLocalStorage();
+  }
+
+  loadStateFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('todos', this.state.todos));
+  }
+
+  saveStateToLocalStorage() {
+    localStorage.setItem('todos', JSON.stringify(this.state.todos));
   }
 
   componentWillMount() {
-    this.setTodos();
+    if (this.loadStateFromLocalStorage()) {
+      this.setState({todos: this.loadStateFromLocalStorage()})
+    } else {
+      this.setTodos();
+      this.saveStateToLocalStorage();
+    }
   }
 
   render() {
