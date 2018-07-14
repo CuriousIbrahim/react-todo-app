@@ -72,7 +72,10 @@ class App extends Component {
     // this.setTodos();
 
     return (<div className="App">
-      <h1>React Todo App</h1>
+      <h1>React Todo App
+        <small id="author">
+          Built by Ibrahim Abdul Hammed</small>
+      </h1>
 
       <AddTodo onAdd={this.addTodo.bind(this)}/>
       <Todos todos={this.state.todos} onDelete={this.deleteTodo.bind(this)}/>
