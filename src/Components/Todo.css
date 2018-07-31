@@ -8,3 +8,9 @@
   padding: 10px;
   cursor: pointer;
 }
+
+.todo-anim-leave-active {
+  opacity: 0.01;
+  width: 0px;
+  transition: 700ms;
+}
